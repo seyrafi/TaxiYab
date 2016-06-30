@@ -502,8 +502,12 @@ public class FragmentMap extends Fragment implements
             return;
         if (latLng == null) {
             Location mLastLocation = LocationServices.FusedLocationApi.getLastLocation(mGoogleApiClient);
-            if (mLastLocation !=  null)
+            if (mLastLocation !=  null) {
+                Log.d("DEBUG", "current location: " + mLastLocation.toString());
                 latLng = new LatLng(mLastLocation.getLatitude(), mLastLocation.getLongitude());
+            }
+            else
+                latLng = new LatLng(Constants.TEHRAN_ENQELAB_SQ_LATITUDE, Constants.TEHRAN_ENQELAB_SQ_LONGITUDE);
         }
         if (latLng != null) {
             CameraPosition cameraPosition = CameraPosition.builder()
@@ -527,6 +531,13 @@ public class FragmentMap extends Fragment implements
         // listeners will be executed. GoogleApiClient will automatically attempt to restore the connection.
         // Applications should disable UI components that require the service, and wait for a call to
         // onConnected(Bundle) to re-enable them.
+
+//        if (i == CAUSE_SERVICE_DISCONNECTED) {
+//            Toast.makeText(this, "Disconnected. Please re-connect.", Toast.LENGTH_SHORT).show();
+//        } else if (i == CAUSE_NETWORK_LOST) {
+//            Toast.makeText(this, "Network lost. Please re-connect.", Toast.LENGTH_SHORT).show();
+//        }
+
         MyToast.makeText(context, "خطا در اتصال به سرور نقشه", MyToast.LENGTH_SHORT).show();
     }
 

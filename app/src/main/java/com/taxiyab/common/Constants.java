@@ -20,4 +20,6 @@ public class Constants {
     public static float ic_pin_blue_end_anchorU = (float)0.5;
     public static float ic_pin_blue_end_anchorV = (float)1;
 
+    public static double TEHRAN_ENQELAB_SQ_LATITUDE = 35.70088129977037;
+    public static double TEHRAN_ENQELAB_SQ_LONGITUDE = 51.391183398664;
 }
