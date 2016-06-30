@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/map_main_container"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+
+
+    <LinearLayout
+        android:id="@+id/panelMapFragment"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <fragment
+            android:id="@+id/map"
+            android:name="com.google.android.gms.maps.MapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="0px"
+            android:layout_weight="1"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/panelInfo"
+        android:orientation="vertical"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="visible" >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="مبدا"
+            android:id="@+id/txtSrc"
+            android:visibility="visible"
+            android:layout_gravity="center_horizontal" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="مقصد"
+            android:id="@+id/txtDest"
+            android:visibility="visible"
+            android:layout_gravity="center_horizontal" />
+    </LinearLayout>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ادامه"
+        android:id="@+id/btnContinue"
+        android:layout_margin="0dip"
+        android:layout_centerHorizontal="true"
+        android:visibility="visible" />
+
+
+    <LinearLayout
+        android:id="@+id/panelPlacesSearchBox"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <View
+            android:layout_width="0px"
+            android:layout_height="1px"
+            android:layout_weight="0.17" />
+        <AutoCompleteTextView
+            android:id="@+id/txtInlineSearchPlaces"
+            android:layout_width="0px"
+            android:layout_weight="0.66"
+            android:layout_height="wrap_content"
+            android:background="@android:drawable/editbox_background_normal"
+            android:hint="جستجوی مکان ها"
+            android:singleLine="true"
+            android:imeOptions="actionSearch"
+            android:layout_centerHorizontal="true"
+            android:dropDownVerticalOffset="5dp"
+            android:dropDownWidth="wrap_content"
+            android:popupBackground="@color/white"
+            android:textColor="#0000ff"
+            android:ems="10" />
+        <View
+            android:layout_width="0px"
+            android:layout_height="1px"
+            android:layout_weight="0.17" />
+    </LinearLayout>
+
+
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_pin_green_start"
+        android:background="@null"
+        android:id="@+id/btnStartingPoint"
+        android:visibility="invisible"
+        android:layout_centerHorizontal="true" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_pin_blue_end"
+        android:background="@null"
+        android:id="@+id/btnEndingPoint"
+        android:visibility="visible"
+        android:layout_centerHorizontal="true" />
+
+</RelativeLayout>

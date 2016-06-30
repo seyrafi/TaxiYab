@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingRight="30dp"
+    android:paddingLeft="30dp"
+    android:background="@drawable/bgdialog">
+
+
+    <Spinner
+        android:id="@+id/spinnerPickupTime"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:prompt="@string/pickup_time_title"
+        android:layout_marginTop="30dp"
+        android:gravity="right"/>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingTop="40dp"
+        android:paddingBottom="0dp">
+        <Button
+            android:id="@+id/btnCancel"
+            android:layout_width="0px"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:background="@drawable/btn_yellow"
+            style="@style/ButtonText"
+            android:focusable="true"
+            android:imeOptions="actionNext"
+            android:text="انصراف">
+            <requestFocus />
+        </Button>
+        <Button
+            android:id="@+id/btnContinue"
+            android:layout_width="0px"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="ادامه"
+            android:singleLine="true"
+            android:background="@drawable/btn_blue"
+            android:imeOptions="actionDone"
+            style="@style/ButtonText" >
+        </Button>
+    </LinearLayout>
+
+</LinearLayout>

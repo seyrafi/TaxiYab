@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingRight="30dp"
+    android:paddingLeft="30dp"
+    android:background="@drawable/bgdialog">
+    <TextView
+        android:id="@+id/lblFare"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:text="تعداد نفرات"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:textSize="19sp"
+        android:paddingTop="20dp"
+        android:paddingBottom="15dp"
+        />
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/panelBtnPassengerCount1"
+            android:layout_width="0px"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/btn_state_full_1"
+                android:id="@+id/btnPassengerCount1"
+                android:layout_centerHorizontal="true" />
+        </LinearLayout>
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/panelBtnPassengerCount2"
+            android:layout_width="0px"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/btn_state_full_2"
+                android:id="@+id/btnPassengerCount2"
+                android:layout_centerHorizontal="true" />
+        </LinearLayout>
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/panelBtnPassengerCount3"
+            android:layout_width="0px"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/btn_state_full_3"
+                android:id="@+id/btnPassengerCount3"
+                android:layout_centerHorizontal="true" />
+        </LinearLayout>
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/panelBtnPassengerCount4"
+            android:layout_width="0px"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/btn_state_full_4"
+                android:id="@+id/btnPassengerCount4"
+                android:layout_centerHorizontal="true" />
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingTop="40dp"
+        android:paddingBottom="0dp">
+        <Button
+            android:id="@+id/btnCancel"
+            android:layout_width="0px"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:background="@drawable/btn_yellow"
+            style="@style/ButtonText"
+            android:focusable="true"
+            android:imeOptions="actionNext"
+            android:text="انصراف">
+            <requestFocus />
+        </Button>
+        <Button
+            android:id="@+id/btnContinue"
+            android:layout_width="0px"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="ادامه"
+            android:singleLine="true"
+            android:background="@drawable/btn_blue"
+            android:imeOptions="actionDone"
+            style="@style/ButtonText" >
+        </Button>
+    </LinearLayout>
+
+</LinearLayout>
